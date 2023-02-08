@@ -41,7 +41,7 @@ Package(
 ## To add a new version of Airship here:
 1. Download official Airship release zip from their Github releases and unzip it.
 1. Zip up each of the xcframeworks into _individual zip files_, and place them in your local working copy of this repo (they are .gitignore'd)
-1. Update the version number in the Package.swift binaryTarget URL's in this repo to reflect the new version of Airship.  You should only have to change the version number in the URL.  Assets won't be available at those URL's yet because we have not attached them to a release yet.
+1. Update the version number in the Package.swift binaryTarget URL's in this repo to reflect the new version of Airship.  You should only have to change the version number in the URL.  Assets won't be available at those URL's yet because we have not attached them to a published release yet.
 1. Recalculate checksum entries for each of the xcframeworks locally, and update the Package.swift in this repo with those new checksums.
     ```
     $ swift package compute-checksum AirshipBasement.16.10.7.xcframework.zip
