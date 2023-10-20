@@ -29,6 +29,13 @@ let package = Package(
   ],
   targets: [
     .target(
+      name: "AirshipAutomationTarget",
+      dependencies: [
+        "AirshipBasementTarget",
+        "AirshipAutomation"
+      ]
+    ),
+    .target(
       name: "AirshipBasementTarget",
       dependencies: [
         "AirshipBasement"
@@ -42,13 +49,6 @@ let package = Package(
       ]
     ),
     .target(
-      name: "AirshipAutomationTarget",
-      dependencies: [
-        "AirshipBasementTarget",
-        "AirshipAutomation"
-      ]
-    ),
-    .target(
       name: "AirshipMessageCenterTarget",
       dependencies: [
         "AirshipBasementTarget",
@@ -56,24 +56,24 @@ let package = Package(
       ]
     ),
     .binaryTarget(
+      name: "AirshipAutomation",
+      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/17.5.1/AirshipAutomation.xcframework.zip",
+      checksum: "c6cadaf5a0a5ba247b4db306689b5b5eff91006256a0bca074909b763059424d"
+    ),
+    .binaryTarget(
       name: "AirshipBasement",
-      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/16.10.7/AirshipBasement.xcframework.zip",
-      checksum: "1df6e1550c298b36865e492d5e0e6331e1375d0233ecb7d3e46fe39a760b9638"
+      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/17.5.1/AirshipBasement.xcframework.zip",
+      checksum: "88595bcb5b230536e0a2fb8dc407ef7e1df9515d466ac65b48d94a2f8867c929"
     ),
     .binaryTarget(
       name: "AirshipCore",
-      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/16.10.7/AirshipCore.xcframework.zip",
-      checksum: "ef2e3362f8b7351d94941b21d190ca8854bef2a301b9f695a804db6665baf34c"
+      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/17.5.1/AirshipCore.xcframework.zip",
+      checksum: "348c2ddf06cebd76b22cf9b6bce578828858491f58feabd7144a67d2e78f6e0d"
     ),
     .binaryTarget(
       name: "AirshipMessageCenter",
-      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/16.10.7/AirshipMessageCenter.xcframework.zip",
-      checksum: "606af4c47980837c8e2472268b18ee0c0d39e0f6d80f50f69e8b55d454b31005"
-    ),
-    .binaryTarget(
-      name: "AirshipAutomation",
-      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/16.10.7/AirshipAutomation.xcframework.zip",
-      checksum: "9554fcf342ecc5da2f806720c1a95957313abad3d5969374919bfa0090288663"
+      url: "https://github.com/hatch-mobile/ios-airship-spm/releases/download/17.5.1/AirshipMessageCenter.xcframework.zip",
+      checksum: "434f2e4cd91d8445c2d7bbb895e6bf8651be8f590b98c4c5aa5a935fbe5d45c1"
     )
   ]
 )
